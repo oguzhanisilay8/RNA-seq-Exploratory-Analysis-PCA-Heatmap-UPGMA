@@ -43,28 +43,30 @@ All analyses were conducted using R and open-source packages.
 
 ## Project Structure
 ```text
-RNA-seq-Exploratory-Analysis/
+RNA-seq-Exploratory-Analysis-PCA-Heatmap-UPGMA/
 ├── scripts/
-│   └── analysis.R        # Main analysis script
-├── results/
-│   └── figures/          # PCA, heatmap, and clustering outputs
-├── session_info.txt      # R environment information
+│ └── analysis.R # Main analysis script
+├── results/ # Output figures (PCA, heatmap, dendrogram)
+├── session_info.txt # R session information for reproducibility
 ├── README.md
-└── LICENSE
+├── LICENSE
+├── CITATION.cff
+├── CHANGELOG.md
+└── CODE_OF_CONDUCT.md
 ```
 
 ## How to Run
 
-1.Download the dataset from GEO (GSE164073)
 
-2.Place the count file in the project directory
+## How to Run
 
-3.Open R or RStudio
+1. Download the dataset from GEO (GSE164073).
+2. Place the count file in the project directory (or update the file path in `scripts/analysis.R`).
+3. Open R / RStudio and run:
 
-4.Run:
+```r
 source("scripts/analysis.R")
-
-5.Output figures will be generated in the results/ directory.
+```
 
 ## AI Assistance Disclosure
 
