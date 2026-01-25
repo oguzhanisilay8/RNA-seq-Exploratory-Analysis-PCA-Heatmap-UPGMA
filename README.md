@@ -42,7 +42,7 @@ The main steps of the analysis include:
 All analyses were conducted using R and open-source packages.
 
 ## Project Structure
-
+```text
 RNA-seq-Exploratory-Analysis/
 ├── scripts/
 │   └── analysis.R        # Main analysis script
@@ -51,7 +51,7 @@ RNA-seq-Exploratory-Analysis/
 ├── session_info.txt      # R environment information
 ├── README.md
 └── LICENSE
-
+```
 
 ## How to Run
 
