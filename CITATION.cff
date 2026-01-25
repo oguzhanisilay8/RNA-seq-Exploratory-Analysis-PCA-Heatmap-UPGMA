@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "RNA-seq Exploratory Analysis using PCA, Heatmap, and UPGMA"
+version: 0.1.0
+date-released: 2026-01-25
+
+authors:
+  - family-names: "Işılay"
+    given-names: "Oğuzhan"
+    affiliation: "Mersin University"
+
+repository-code: "https://github.com/oguzhanisilay8/RNA-seq-Exploratory-Analysis-PCA-Heatmap-UPGMA"
+
+keywords:
+  - RNA-seq
+  - bioinformatics
+  - PCA
+  - clustering
+  - transcriptomics
