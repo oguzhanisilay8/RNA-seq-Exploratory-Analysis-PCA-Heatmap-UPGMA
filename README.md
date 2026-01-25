@@ -41,6 +41,32 @@ The main steps of the analysis include:
 
 All analyses were conducted using R and open-source packages.
 
+## Project Structure
+
+```text
+RNA-seq-Exploratory-Analysis/
+├── scripts/
+│   └── analysis.R        # Main analysis script
+├── results/
+│   └── figures/          # PCA, heatmap, and clustering outputs
+├── session_info.txt      # R environment information
+├── README.md
+└── LICENSE
+
+
+## How to Run
+
+1.Download the dataset from GEO (GSE164073)
+
+2.Place the count file in the project directory
+
+3.Open R or RStudio
+
+4.Run:
+source("scripts/analysis.R")
+
+5.Output figures will be generated in the results/ directory.
+
 ## AI Assistance Disclosure
 
 Artificial intelligence tools were partially used during the development of this project, mainly for:
