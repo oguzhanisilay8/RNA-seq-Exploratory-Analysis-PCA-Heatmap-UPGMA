@@ -43,7 +43,6 @@ All analyses were conducted using R and open-source packages.
 
 ## Project Structure
 
-```text
 RNA-seq-Exploratory-Analysis/
 ├── scripts/
 │   └── analysis.R        # Main analysis script
