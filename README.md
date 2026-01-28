@@ -56,9 +56,6 @@ RNA-seq-Exploratory-Analysis-PCA-Heatmap-UPGMA/
 
 ## How to Run
 
-
-## How to Run
-
 1. Download the dataset from GEO (GSE164073).
 2. Place the count file in the project directory (or update the file path in `scripts/analysis.R`).
 3. Open R / RStudio and run:
