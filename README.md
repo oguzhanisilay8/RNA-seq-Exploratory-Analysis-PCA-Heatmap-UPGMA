@@ -1,43 +1,42 @@
-# RNA-seq-Exploratory-Analysis-PCA-Heatmap-UPGMA
+# RNA-seq Exploratory Analysis with PCA, Heatmap, and UPGMA
 
 This repository presents an exploratory RNA-seq data analysis workflow implemented in R.  
 The project focuses on understanding transcriptomic similarities and differences among samples through dimensionality reduction, clustering, and visualization techniques.
 
 ---
 
-##  Project Overview
+## Project Overview
 
 In this project, RNA-seq count data were analyzed to explore gene expression patterns and sample relationships using:
 
-- Principal Component Analysis (PCA)
-- Heatmap visualization of highly variable genes
-- UPGMA hierarchical clustering
+- Principal Component Analysis (PCA)  
+- Heatmap visualization of highly variable genes  
+- UPGMA hierarchical clustering  
 
-The aim is to demonstrate how transcriptomic data can be processed and interpreted in an exploratory bioinformatics workflow.
+The main objective is to demonstrate how transcriptomic data can be processed, explored, and interpreted within an exploratory bioinformatics workflow.
 
 ---
 
 ## Dataset Information
 
-- Source: Gene Expression Omnibus (GEO, NCBI)
-- Accession: GSE164073
-- Data type: Raw gene count matrix
-- Organism: Homo sapiens
-
+- Source: Gene Expression Omnibus (GEO, NCBI)  
+- Accession: GSE164073  
+- Data type: Raw gene count matrix  
+- Organism: *Homo sapiens*  
 ---
 
-##  Analysis Workflow
+## Analysis Workflow
 
 The main steps of the analysis include:
 
-1. Importing raw RNA-seq count data
-2. Quality control and low-count gene filtering
-3. Log2 normalization
-4. Data scaling
-5. Principal Component Analysis (PCA)
-6. Identification of highly variable genes
-7. Heatmap visualization
-8. UPGMA hierarchical clustering
+1. Importing raw RNA-seq count data  
+2. Quality control and low-count gene filtering  
+3. Log2 normalization  
+4. Data scaling  
+5. Principal Component Analysis (PCA)  
+6. Identification of highly variable genes  
+7. Heatmap visualization  
+8. UPGMA hierarchical clustering  
 
 All analyses were conducted using R and open-source packages.
 
@@ -67,6 +66,10 @@ RNA-seq-Exploratory-Analysis-PCA-Heatmap-UPGMA/
 ```r
 source("scripts/analysis.R")
 ```
+## Reproducibility
+
+To ensure reproducibility, R session information and package versions are provided in session_info.txt.
+Running the analysis using the same environment is recommended for consistent results.
 
 ## AI Assistance Disclosure
 
