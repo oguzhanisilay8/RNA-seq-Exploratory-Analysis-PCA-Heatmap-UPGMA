@@ -1,19 +1,25 @@
-# RNA-seq Exploratory Analysis  
+![R](https://img.shields.io/badge/language-R-blue)
+![RNA-seq](https://img.shields.io/badge/analysis-RNAseq-green)
+![License](https://img.shields.io/badge/license-MIT-orange)
+
+# RNA-seq Exploratory Analysis
 
 ## PCA, Heatmap and UPGMA Clustering
 
-This repository contains an exploratory analysis of RNA-seq gene expression data using basic statistical and visualization techniques.
+![PCA Visualization](results/pca_samples_labeled.png)
 
-The goal of this project is to investigate global gene expression patterns and sample relationships using dimensionality reduction and clustering methods.
+This repository presents an exploratory analysis of RNA-seq gene expression data using fundamental statistical and visualization techniques.
 
-The analysis demonstrates a simple and transparent RNA-seq exploratory workflow implemented in R.
+The objective of this project is to investigate global gene expression patterns and relationships between samples using dimensionality reduction and clustering methods.
+
+The analysis demonstrates a clear and transparent RNA-seq exploratory workflow implemented in **R**.
 
 ---
 
-## Project Overview
+# Project Overview
 
-RNA-seq experiments measure expression levels of thousands of genes across multiple samples.  
-Before performing differential expression analysis, it is important to explore the structure of the dataset.
+RNA-seq experiments measure the expression levels of thousands of genes across multiple biological samples.  
+Before performing differential expression analysis, it is essential to explore the structure and variability of the dataset.
 
 This project focuses on exploratory analysis of RNA-seq count data using:
 
@@ -23,23 +29,27 @@ This project focuses on exploratory analysis of RNA-seq count data using:
 - heatmap visualization
 - hierarchical clustering (UPGMA)
 
-These methods help reveal global transcriptional patterns and potential sample heterogeneity.
+These techniques help reveal global transcriptional patterns and potential sample heterogeneity.
 
 ---
 
-## Dataset
+# Dataset
 
-The dataset used in this study was obtained from the GEO (Gene Expression Omnibus) database.
+The dataset used in this study was obtained from the **GEO (Gene Expression Omnibus)** database.
 
-**Dataset ID**
+Dataset ID:
 
 GSE164073
 
-**File used**
+Dataset link:
+
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE164073
+
+File used:
 
 GSE164073_raw_counts_GRCh38.p13_NCBI.tsv.gz
 
-**Dataset characteristics**
+Dataset characteristics:
 
 - organism: *Homo sapiens*
 - genes: 39,376
@@ -47,8 +57,10 @@ GSE164073_raw_counts_GRCh38.p13_NCBI.tsv.gz
 - data type: raw RNA-seq count matrix
 
 The dataset contains gene-level expression counts for multiple human samples.
+
 ---
-## Analysis Workflow
+
+# Analysis Workflow
 
 The analysis pipeline used in this repository follows the steps below:
 
@@ -70,9 +82,9 @@ This workflow is commonly used to explore the structure of RNA-seq datasets befo
 
 ---
 
-## Methods
+# Methods
 
-### Gene Filtering
+## Gene Filtering
 
 Genes with extremely low counts were removed to reduce noise in the dataset.
 
@@ -86,7 +98,7 @@ Only genes with sufficient total expression across samples were retained.
 
 ---
 
-### Log Transformation
+## Log Transformation
 
 Raw RNA-seq counts often show strong variance differences.  
 To stabilize variance, the following transformation was applied:
@@ -99,7 +111,7 @@ Adding +1 prevents log transformation errors caused by zero counts.
 
 ---
 
-### Principal Component Analysis (PCA)
+## Principal Component Analysis (PCA)
 
 PCA was used to reduce the dimensionality of the gene expression matrix and visualize relationships between samples.
 
@@ -112,7 +124,7 @@ Samples that cluster together show similar transcriptional patterns.
 
 ---
 
-### Heatmap of Highly Variable Genes
+## Heatmap of Highly Variable Genes
 
 To highlight genes contributing most to sample differences, the **top 50 most variable genes** were selected based on variance.
 
@@ -126,29 +138,56 @@ Heatmaps help reveal:
 
 ---
 
-### Hierarchical Clustering (UPGMA)
+## Hierarchical Clustering (UPGMA)
 
 Hierarchical clustering was performed using the **UPGMA (average linkage)** method.
 
 This approach groups samples based on their global gene expression similarity.
 
-The resulting dendrogram shows how samples cluster together and provides an additional view of dataset structure.
+The resulting dendrogram provides an additional perspective on dataset structure and sample relationships.
 
 ---
 
-## Repository Structure
+# Results
+
+Example outputs generated during the analysis.
+
+## PCA Visualization
+
+![PCA](results/pca_samples_labeled.png)
+
+## Heatmap of Highly Variable Genes
+
+![Heatmap](results/heatmap_top50_variable_genes.png)
+
+## Annotated Heatmap
+
+![Annotated Heatmap](results/heatmap_top50_variable_genes_annotated.png)
+
+## Hierarchical Clustering (UPGMA)
+
+![UPGMA](results/upgma_sample_clustering.png)
+
+---
+
+# Repository Structure
 
 ```
 RNA-seq-Exploratory-Analysis-PCA-Heatmap-UPGMA
 
 │
-├── figures
-│   ├── pca_plot.png
-│   ├── heatmap.png
-│   └── upgma_dendrogram.png
+├── results
+│   ├── pca_samples_basic.png
+│   ├── pca_samples_labeled.png
+│   ├── heatmap_top50_variable_genes.png
+│   ├── heatmap_top50_variable_genes_annotated.png
+│   └── upgma_sample_clustering.png
+│
+├── scripts
+│   └── rnaseq_exploratory_analysis.html
 │
 ├── rnaseq_exploratory_analysis.Rmd
-├── rnaseq_exploratory_analysis.html
+├── session_info.txt
 │
 ├── README.md
 └── LICENSE
@@ -156,7 +195,7 @@ RNA-seq-Exploratory-Analysis-PCA-Heatmap-UPGMA
 
 ---
 
-## How to Run the Analysis
+# How to Run the Analysis
 
 1. Download the RNA-seq dataset from GEO
 
@@ -178,9 +217,9 @@ rnaseq_exploratory_analysis.Rmd
 
 ---
 
-## Software
+# Software
 
-Analysis was performed using **R**.
+The analysis was performed using **R**.
 
 Main functions used:
 
@@ -190,7 +229,7 @@ Main functions used:
 
 ---
 
-## Reproducibility
+# Reproducibility
 
 The R session information and package versions used in the analysis are provided at the end of the R Markdown report using:
 
@@ -200,18 +239,43 @@ sessionInfo()
 
 ---
 
-## Author
+# Citation
 
-Oğuzhan Işılay
+If you use this repository in teaching or research, please cite it as:
+
+Oğuzhan Işılay (2026)  
+RNA-seq Exploratory Analysis using PCA, Heatmap and UPGMA Clustering  
+GitHub Repository  
+https://github.com/oguzhanisilay8/RNA-seq-Exploratory-Analysis-PCA-Heatmap-UPGMA
+
+---
+
+# AI Assistance
+
+Artificial intelligence tools were used to improve documentation structure and readability.  
+All analysis steps, code implementation, and interpretation of results were performed and verified by the author.
+
+---
+
+# Author
+
+**Oğuzhan Işılay**
 
 Biotechnology student interested in:
 
 - bioinformatics
 - computational biology
+- RNA-seq data analysis
 - AI applications in biology
+
+GitHub  
+https://github.com/oguzhanisilay8
+
+LinkedIn  
+https://www.linkedin.com/in/oguzhan-isilay-/
 
 ---
 
-## License
+# License
 
-This project is released under the MIT License.
+This project is released under the **MIT License**.
