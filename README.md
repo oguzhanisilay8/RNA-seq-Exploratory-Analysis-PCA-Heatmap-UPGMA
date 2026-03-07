@@ -187,6 +187,7 @@ RNA-seq-Exploratory-Analysis-PCA-Heatmap-UPGMA
 │   └── rnaseq_exploratory_analysis.html
 │
 ├── rnaseq_exploratory_analysis.Rmd
+├── rnaseq_exploratory_analysis.pdf
 ├── session_info.txt
 │
 ├── README.md
